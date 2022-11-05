@@ -1,0 +1,7 @@
+With a database configured:
+
+1. > php artisan session:table
+2. > php artisan spark:install
+3. > php artisan jetstream:install livewire
+3. > php artisan vendor:publish --tag=jetstream-views
+4. > php artisan migrate
