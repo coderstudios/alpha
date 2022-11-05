@@ -4,7 +4,6 @@ use App\Models\User;
 use Spark\Features;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Spark Path
@@ -129,7 +128,6 @@ return [
     */
 
     'billables' => [
-
         'user' => [
             'model' => User::class,
 
@@ -141,8 +139,8 @@ return [
                 [
                     'name' => 'Standard',
                     'short_description' => 'This is a short, human friendly description of the plan.',
-                    'monthly_id' => 'price_id',
-                    'yearly_id' => 'price_id',
+                    'monthly_id' => env('STRIPE_MONTHLY_PRICE_ID_1', ''),
+                    'yearly_id' => env('STRIPE_YEARLY_PRICE_ID_1', ''),
                     'features' => [
                         'Feature 1',
                         'Feature 2',
@@ -150,7 +148,6 @@ return [
                     ],
                 ],
             ],
-
         ],
     ],
 ];
